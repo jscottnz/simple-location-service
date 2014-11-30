@@ -1,0 +1,15 @@
+{
+  "name": "jscottnzSimpleLocationService",
+  "version": "1.0.0",
+  "description": "Simple Location Service",
+  "main": "db.js",
+  "dependencies": {
+    "MD5": "^1.2.1",
+    "cheerio": "^0.18.0",
+    "db4js": "git://github.com/jscottnz/db4js.git#d9c1889",
+    "express": "^4.10.4",
+    "q": "^1.1.2",
+    "shutdown-handler": "^1.0.0"
+  },
+  "devDependencies": {}
+}
