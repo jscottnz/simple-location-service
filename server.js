@@ -2,13 +2,14 @@ var express = require('express');
 var router = express();
 var Db = require('db4js');
 
-if(process.argv.length != 3) {
-	console.log("Expect db file param i.e.")
-	console.log("node server.js nz.db")
+if(process.argv.length != 4) {
+	console.log("Expect db file and port param i.e.")
+	console.log("node server.js nz.db 3000")
 	process.exit(1)
 }
 
 var LOCATIONDB = process.argv[2]
+var PORT = process.argv[3]
 
 var error = function(response, message) {
 	response.writeHead(200, {'Access-Control-Allow-Origin' : '*'});
@@ -68,7 +69,7 @@ router.get("/location/search/:input", function(request, response) {
 
 })
 
-router.listen(3000);
+router.listen(PORT);
 console.error("Server ready");
 
 require('shutdown-handler').on('exit', function() {
